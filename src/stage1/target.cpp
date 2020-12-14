@@ -23,6 +23,7 @@ static const ZigLLVM_ArchType arch_list[] = {
     ZigLLVM_avr,            // AVR: Atmel AVR microcontroller
     ZigLLVM_bpfel,          // eBPF or extended BPF or 64-bit BPF (little endian)
     ZigLLVM_bpfeb,          // eBPF or extended BPF or 64-bit BPF (big endian)
+    ZigLLVM_csky,           // CSKY: csky
     ZigLLVM_hexagon,        // Hexagon: hexagon
     ZigLLVM_mips,           // MIPS: mips, mipsallegrex, mipsr6
     ZigLLVM_mipsel,         // MIPSEL: mipsel, mipsallegrexe, mipsr6el
@@ -71,8 +72,6 @@ static const ZigLLVM_VendorType vendor_list[] = {
     ZigLLVM_Apple,
     ZigLLVM_PC,
     ZigLLVM_SCEI,
-    ZigLLVM_BGP,
-    ZigLLVM_BGQ,
     ZigLLVM_Freescale,
     ZigLLVM_IBM,
     ZigLLVM_ImaginationTechnologies,
@@ -101,11 +100,11 @@ static const Os os_list[] = {
     OsOpenBSD,
     OsSolaris,
     OsWindows,
+    OsZOS,
     OsHaiku,
     OsMinix,
     OsRTEMS,
     OsNaCl,       // Native Client
-    OsCNK,        // BG/P Compute-Node Kernel
     OsAIX,
     OsCUDA,       // NVIDIA CUDA
     OsNVCL,       // NVIDIA OpenCL
